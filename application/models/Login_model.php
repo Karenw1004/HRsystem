@@ -5,7 +5,7 @@
      {  
           $this->db->where('email', $email);  
           $query = $this->db->get('codeigniter_register');  
-          //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
+          //SELECT * FROM users WHERE 'email' = $email
           if($query->num_rows() > 0)  
           {  
           foreach($query->result() as $row){

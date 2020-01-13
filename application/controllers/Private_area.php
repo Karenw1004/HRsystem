@@ -6,18 +6,18 @@
         if (!$this->session->userdata('id')){
             redirect("login");
         }
+        $this->load->model('table_model');
        
     }
 
     function index() {
         if ($this->session->level == 1 ){
-            echo "<h1>Admin Page</h1>";
-            echo "WElcome " ;
-            echo $this->session->userdata('name');
-        //    echo $this->session->userdata('email');
-            echo "Level is " ;
-            echo $this->session->userdata('level') ;
             echo '<p align="center"><a href="'.base_url().'private_area/logout">Logout</a><p>';
+            $data['employee'] = $this->table_model->get_all_data();
+            // echo "<script>console.log('Debug Objects: " . $data . "' );</script>";
+            // $this->load->view("admin/admin_table", $data);
+            // $this->load->view("admin/admin_table");
+            redirect("table");
         }
 
     }
@@ -37,7 +37,6 @@
             echo "<h1>Manager Page</h1>";
             echo "WElcome " ;
             echo $this->session->userdata('name');
-        //    echo $this->session->userdata('email');
             echo "Level is " ;
             echo $this->session->userdata('level') ;
             echo '<p align="center"><a href="'.base_url().'private_area/logout">Logout</a><p>';

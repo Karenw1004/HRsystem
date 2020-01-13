@@ -1,0 +1,27 @@
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
+
+
+
+<?php 
+                  if ($employee->num_rows() > 0){
+                    foreach ($employee->result() as $row){
+                      echo "<tr>  <td>" .$row->id. "</td></tr>";
+                    }
+         
+                  }  
+                  else {
+                    echo "<tr><td>" .$empty. "</td></tr>";
+                  }
+                ?>

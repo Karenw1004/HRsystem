@@ -113,3 +113,16 @@ $db['default'] = array(
   
 //   ALTER TABLE `codeigniter_register`
 // 	MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+// CREATE TABLE `employee` (
+// 	`id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+// 	`NIK` INT(16) NOT NULL,
+// 	`email` VARCHAR(50) NOT NULL,
+// 	`firstname` VARCHAR(50) NOT NULL,
+// 	`lastname` VARCHAR(50) NOT NULL,
+// 	`division` VARCHAR(50) NOT NULL,
+// 	`position` VARCHAR(50) NOT NULL,
+// 	`address` VARCHAR(255) NOT NULL,
+// 	`photo_path` VARCHAR(255) NOT NULL,
+// 	`join_date` VARCHAR(16) NOT NULL
+// );

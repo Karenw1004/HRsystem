@@ -124,6 +124,10 @@
 
     
   }
+
+  function register() {
+    $this->load->view("register");
+  }
   function register_validation()
   {
    $this->form_validation->set_rules('user_name', 'Name', 'required|trim');
