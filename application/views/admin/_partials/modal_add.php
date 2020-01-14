@@ -15,7 +15,7 @@
                         <input type="text" name="NIK" class="form-control" placeholder="NIK" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="email" class="form-control" placeholder="email" required>
+                        <input type="email" name="email" class="form-control" placeholder="email" required>
                     </div>
                     <div class="form-group">
                         <input type="text" name="first_name" class="form-control" placeholder="first_name " required>
