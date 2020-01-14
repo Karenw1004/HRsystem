@@ -8,6 +8,7 @@
     }
     function index(){
         $data['employee'] = $this->table_model->get_all_data();
+        $data['category'] = $this->table_model->get_category();
         // $data['empty'] = "this is EMPTY";
         // echo "<script>console.log('Debug Objects: " . $data . "' );</script>";
         $this->load->view("admin/admin_table", $data);

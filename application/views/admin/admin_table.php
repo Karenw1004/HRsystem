@@ -35,7 +35,7 @@
 
           <h1 class="h3 mb-2 text-gray-800">Employee Table</h1>
           <button class="btn btn-success pull-right" data-toggle="modal" data-target="#myModalAdd">Add New</button>
-              
+          <?php $this->load->view("admin/_partials/modal_add.php") ?>
           <div class="container">
             
             <div class="table-responsive">
