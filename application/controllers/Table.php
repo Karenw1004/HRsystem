@@ -3,50 +3,67 @@
  class Table extends CI_Controller {  
     public function __construct() {
         parent::__construct();
+        $this->load->helper('form');
+
+        $this->load->library('form_validation');
+
         $this->load->model('table_model');
     }
     function index(){
         $data['employee'] = $this->table_model->get_all_data();
         $data['category'] = $this->table_model->get_category();
-        $this->load->view("admin/admin_table", $data);
+        $this->form_validation->set_rules('NIK','NIK', 'unique');
+        $this->form_validation->set_rules('user_email', 'Email Address', 'required|trim|valid_email');
+        if ($this->form_validation->run()){
+            
+            $id = $this->input->post("id",TRUE);
+            $new_data   =   array(
+                "NIK"                   => $this->input->post("NIK"),
+                "email"                 =>  $this->input->post("email"),
+                "first_name"            =>  $this->input->post("first_name"),
+                "last_name"             =>  $this->input->post("last_name"),
+                "division"              =>  $this->input->post("division"),
+                "position"              =>  $this->input->post("position"),
+                "phone_num"             =>  $this->input->post("phone_num"),
+                "address"               =>  $this->input->post("address"),
+                "photo_path"            =>  $this->input->post("photo_path"),
+                "join_date"             =>  $this->input->post("join_date"),
+                "employee_category_id" =>  "3"
+            );
+            $this->session->set_flashdata('message', "Here");
+
+            if ($id == ""){ //id empty,insert
+                $result = $this->db->insert("employee", $new_data);
+                $this->session->set_flashdata('message', "Insert Success");
+                redirect("table");
+            } else { //update
+                $this->db->where("id",$id);
+                $result=$this->db->update("employee", $new_data);
+                $this->session->set_flashdata('message', "Update Success");
+                redirect("table");
+            }
+            $this->session->set_flashdata('message', "Nothing");
+        } else {
+            // $this->session->set_flashdata('message', "View view");
+            $this->load->view("admin/admin_table", $data);
+        }
+        
     }
-    
-    // function dumy_data(){
-    //     $jumlah_data = 10;
-    //     for ($i=1;$i<=$jumlah_data;$i++){
-    //     $data   =   array(
-    //         "NIK"                   => $i,
-    //         "email"                 =>  "karyawan-$i@gmil.com",
-    //         "first_name"            =>  "Karyawan Ke-".$i,
-    //         "last_name"             =>  "Last Name Ke-".$i,
-    //         "division"              =>  "SAME",
-    //         "position"              =>  "IDK",
-    //         "phone_num"             =>  '089699935552',
-    //         "address"               =>  "Jln. Axa Tower",
-    //         "photo_path"            =>  "foto-karyawan-$i.jpg",
-    //         "join_date"             =>  "2019-01-09",
-    //         "employee_category_id" =>  "3"
-    //     );
-    //         $this->db->insert('employee',$data); 
-    //     }
-    //     echo $i.' Data Berhasil Di Insert';
-    //     echo json_encode($data);
+   
+    // function save(){ //insert record method
+    //     $this->table_model->insert_product();
+    //     redirect('table');
     // }
    
-    function save(){ //insert record method
-        $this->table_model->insert_product();
-        redirect('table');
-    }
+    // function update(){ //update record method
+    //     $this->table_model->update_product();
+    //     redirect('table');
+    // }
    
-    function update(){ //update record method
-        $this->table_model->update_product();
-        redirect('table');
-    }
-   
-    function delete(){
-        $this->table_model->delete_product();
-        redirect('table');
-    }
+    // function delete(){
+    //     $this->table_model->delete_product();
+    //     redirect('table');
+    // }
        
  }  
 

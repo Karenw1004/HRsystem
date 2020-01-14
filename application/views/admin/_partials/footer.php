@@ -23,7 +23,8 @@
       "searching": true,
       "ordering": true,
       "info": true,
-      "autoWidth": false
+      "autoWidth": false,
+      "scrollX": false
     });
   });
 </script>

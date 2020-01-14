@@ -10,9 +10,6 @@
 
   <link rel="stylesheet" href="<?php echo base_url().'assets/plugins/datatables/dataTables.bootstrap.css'?>">
   <link rel="stylesheet" href="<?php echo base_url().'assets/vendor/datatables/dataTables.bootstrap4.min.css'?>">
-  
-
-
 
 </head>
 <body id="page-top">
@@ -36,6 +33,18 @@
           <h1 class="h3 mb-2 text-gray-800">Employee Table</h1>
           <button class="btn btn-success pull-right" data-toggle="modal" data-target="#myModalAdd">Add New</button>
           <?php $this->load->view("admin/_partials/modal_add.php") ?>
+          <?php $this->load->view("admin/_partials/modal_update.php") ?>
+          <?php 
+          if ($this->session->flashdata('message')){
+               echo '<div class="alert alert-success">'.$this->session->flashdata("message").'</div>';
+          }
+          ?>
+
+          <?php 
+          if ($this->session->flashdata('error')){
+               echo '<div class="alert alert-danger">'.$this->session->flashdata("error").'</div>';
+          }
+          ?>
           <div class="container py-3">
             
             <div class="table-responsive">
@@ -52,7 +61,7 @@
                     <th>Address</th>
                     <th>Photo Path</th>
                     <th>Join date</th>
-                    
+                    <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -85,6 +94,7 @@
                   <td><?php echo $address?></td>
                   <td><?php echo $photo_path?></td>
                   <td><?php echo $join_date?></td>
+                  <td><button class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalUpdate">Update</button></td>
                 </tr>
 				        <?php endforeach;?>
                 </tbody>

@@ -50,7 +50,6 @@
     if ($this->form_validation->run()){
       $email = $this->input->post('user_email');
       $user = $this->db->get_where('codeigniter_register',['email' => $email, 'is_email_verified' => "yes"])->row_array();
-      echo $user;
       if ($user) {
         $verification_key = $user['verification_key'];
         $data = array(

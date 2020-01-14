@@ -21,7 +21,7 @@
                 echo '<div class="alert alert-danger">'.$this->session->flashdata("error").'</div>';
            }
            ?>
-          <form method="POST" action="<?php echo base_url(); ?>register/register_validation">  
+          <form method="POST" action="<?php echo base_url(); ?>login/register_validation">  
                <div class="form-group">  
                     <label>Enter Username</label>  
                     <input type="text" name="user_name" class="form-control" value="<?php echo set_value('user_name'); ?>" />
