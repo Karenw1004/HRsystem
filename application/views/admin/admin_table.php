@@ -52,6 +52,7 @@
                     <th>Address</th>
                     <th>Photo Path</th>
                     <th>Join date</th>
+                    
                 </tr>
               </thead>
               <tbody>

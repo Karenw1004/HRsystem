@@ -11,36 +11,36 @@
         </button>
       </div>
       <div class="modal-body">
-      <div class="form-group">
-                        <input type="text" name="NIK" class="form-control" placeholder="NIK" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="first_name" class="form-control" placeholder="first_name " required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="last_name" class="form-control" placeholder="last_name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="division" class="form-control" placeholder="division" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="position" class="form-control" placeholder="position" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="phone_num" class="form-control" placeholder="phone_num" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="address" class="form-control" placeholder="address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="photo_path" class="form-control" placeholder="photo_path" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="join_date" class="form-control" placeholder="join_date" required>
-                    </div>
+        <div class="form-group">
+            <input type="text" name="NIK" class="form-control" placeholder="Enter your NIK" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="first_name" class="form-control" placeholder="Enter Your First Name " required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="last_name" class="form-control" placeholder="Enter Your Last Name" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="division" class="form-control" placeholder="Enter Your Division" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="position" class="form-control" placeholder="Enter Your Position" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="phone_num" class="form-control" placeholder="Enter Your Phone Num" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="address" class="form-control" placeholder="Enter Your Address" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="photo_path" class="form-control" placeholder="Enter Your Photo Path" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="join_date" class="form-control" placeholder="Enter Your Join Date" required>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

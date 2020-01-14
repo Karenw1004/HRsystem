@@ -3,14 +3,11 @@
  class Table extends CI_Controller {  
     public function __construct() {
         parent::__construct();
-        $this->load->library('datatables'); //load library ignited-dataTable
         $this->load->model('table_model');
     }
     function index(){
         $data['employee'] = $this->table_model->get_all_data();
         $data['category'] = $this->table_model->get_category();
-        // $data['empty'] = "this is EMPTY";
-        // echo "<script>console.log('Debug Objects: " . $data . "' );</script>";
         $this->load->view("admin/admin_table", $data);
     }
     
@@ -34,11 +31,6 @@
     //     }
     //     echo $i.' Data Berhasil Di Insert';
     //     echo json_encode($data);
-    // }
-
-    // function index(){
-    //     $x['category']=$this->table_model->get_category();
-    //     $this->load->view('admin/crud',$x);
     // }
    
     function save(){ //insert record method

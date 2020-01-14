@@ -12,11 +12,6 @@
 
     function index() {
         if ($this->session->level == 1 ){
-            echo '<p align="center"><a href="'.base_url().'private_area/logout">Logout</a><p>';
-            $data['employee'] = $this->table_model->get_all_data();
-            // echo "<script>console.log('Debug Objects: " . $data . "' );</script>";
-            // $this->load->view("admin/admin_table", $data);
-            // $this->load->view("admin/admin_table");
             redirect("table");
         }
 
