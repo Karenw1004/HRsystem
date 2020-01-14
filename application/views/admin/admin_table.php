@@ -8,8 +8,7 @@
   <link href="<?= base_url("assets/"); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="<?= base_url("assets/"); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="<?php echo base_url().'assets/plugins/datatables/dataTables.bootstrap.css'?>">
-  <link rel="stylesheet" href="<?php echo base_url().'assets/plugins/datatables/jquery.dataTables.css'?>">
+  <link rel="stylesheet" href="<?php echo base_url().'assets/vendor/datatables/dataTables.bootstrap4.min.css'?>">
   
 
 
