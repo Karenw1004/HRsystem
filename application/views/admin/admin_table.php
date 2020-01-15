@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SB Admin 2 - Tables</title>
+  <title>MY PROJECT</title>
   <link href="<?= base_url("assets/"); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="<?= base_url("assets/"); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="<?php echo base_url().'assets/plugins/datatables/dataTables.bootstrap.css'?>">
   <link rel="stylesheet" href="<?php echo base_url().'assets/vendor/datatables/dataTables.bootstrap4.min.css'?>">
 
 </head>
@@ -31,7 +30,7 @@
         <div class="container-fluid">
 
           <h1 class="h3 mb-2 text-gray-800">Employee Table</h1>
-          <button class="btn btn-success pull-right" data-toggle="modal" data-target="#myModalAdd">Add New</button>
+          <button class="btn btn-success pull-right" data-toggle="modal" data-target="#myModalAdd"><i class="fas fa-user-plus"></i>  Add New</button>
           <?php $this->load->view("admin/_partials/modal_add.php") ?>
           <?php $this->load->view("admin/_partials/modal_update.php") ?>
           <?php $this->load->view("admin/_partials/modal_delete.php") ?>
@@ -92,8 +91,8 @@
                   <td><?php echo $address?></td>
                   <td><?php echo $photo_path?></td>
                   <td><?php echo $join_date?></td>
-                  <td><button class="btn btn-primary pull-right" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>">Update</button>
-                  <button class="hapus_record btn btn-danger pull-right" data-toggle="modal" data-target="#ModalDelete" data-id="<?php echo $id?>">Delete</button></td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>">Update</button>
+                  <button class="hapus_record btn btn-danger " data-toggle="modal" data-target="#ModalDelete" data-id="<?php echo $id?>">Delete</button></td>
                 </tr>
 				        <?php endforeach;?>
                 </tbody>
