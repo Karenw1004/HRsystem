@@ -51,7 +51,6 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>
-                    <th>NIK</th>
                     <th>EMAIL</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -68,9 +67,8 @@
           				<?php
           					$no=0;
           					foreach ($employee as $row) :
-          					   $no++;
-          					   $id = $row['id'];
-                      $NIK = $row['NIK'];
+                      $no++;
+                      $id = $row['id'];
                       $email = $row['email'];
                       $first_name = $row['first_name'];
                       $last_name = $row['last_name'];
@@ -84,7 +82,6 @@
                        
                     ?>
                 <tr>
-                  <td><?php echo $NIK?></td>
                   <td><?php echo $email?></td>
                   <td><?php echo $first_name?></td>
                   <td><?php echo $last_name?></td>
@@ -94,7 +91,7 @@
                   <td><?php echo $address?></td>
                   <td><?php echo $photo_path?></td>
                   <td><?php echo $join_date?></td>
-                  <td><button class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalUpdate">Update</button></td>
+                  <td><button class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>">Update</button></td>
                 </tr>
 				        <?php endforeach;?>
                 </tbody>

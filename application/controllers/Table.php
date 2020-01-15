@@ -16,6 +16,7 @@
         } else {
             $id = $this->input->post("id",TRUE);
             $new_data   =   array(
+                "NIK"                   =>  strtotime( date('Y-m-d H:i:s') ),
                 "email"                 =>  $this->input->post("email"),
                 "first_name"            =>  $this->input->post("first_name"),
                 "last_name"             =>  $this->input->post("last_name"),
