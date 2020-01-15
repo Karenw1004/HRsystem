@@ -44,8 +44,8 @@ class Table_model extends CI_Model
         return $result;
     }
     function delete_product(){
-        $NIK=$this->input->post("NIK");
-        $this->db->where("employee",$NIK);
+        $id=$this->input->post("id");
+        $this->db->where("id",$id);
         $result=$this->db->delete("employee");
         return $result;
     }

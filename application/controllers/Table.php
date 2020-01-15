@@ -44,20 +44,10 @@
         
     }
    
-    // function save(){ //insert record method
-    //     $this->table_model->insert_product();
-    //     redirect('table');
-    // }
-   
-    // function update(){ //update record method
-    //     $this->table_model->update_product();
-    //     redirect('table');
-    // }
-   
-    // function delete(){
-    //     $this->table_model->delete_product();
-    //     redirect('table');
-    // }
+    function delete(){
+        $this->table_model->delete_product();
+        redirect('table');
+    }
        
  }  
 

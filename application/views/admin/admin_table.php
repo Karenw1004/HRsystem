@@ -34,6 +34,7 @@
           <button class="btn btn-success pull-right" data-toggle="modal" data-target="#myModalAdd">Add New</button>
           <?php $this->load->view("admin/_partials/modal_add.php") ?>
           <?php $this->load->view("admin/_partials/modal_update.php") ?>
+          <?php $this->load->view("admin/_partials/modal_delete.php") ?>
           <?php 
           if ($this->session->flashdata('message')){
                echo '<div class="alert alert-success">'.$this->session->flashdata("message").'</div>';
@@ -91,7 +92,8 @@
                   <td><?php echo $address?></td>
                   <td><?php echo $photo_path?></td>
                   <td><?php echo $join_date?></td>
-                  <td><button class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>">Update</button></td>
+                  <td><button class="btn btn-primary pull-right" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>">Update</button>
+                  <button class="hapus_record btn btn-danger pull-right" data-toggle="modal" data-target="#ModalDelete" data-id="<?php echo $id?>">Delete</button></td>
                 </tr>
 				        <?php endforeach;?>
                 </tbody>
