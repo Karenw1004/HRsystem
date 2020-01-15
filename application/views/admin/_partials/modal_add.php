@@ -14,9 +14,6 @@
 
       <div class="modal-body">
         <div class="form-group">
-            <input type="text" name="NIK" class="form-control" placeholder="Enter your NIK" required>
-        </div>
-        <div class="form-group">
             <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
         </div>
         <div class="form-group">

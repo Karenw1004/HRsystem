@@ -4,21 +4,18 @@
     public function __construct() {
         parent::__construct();
         $this->load->helper('form');
-
         $this->load->library('form_validation');
-
         $this->load->model('table_model');
     }
     function index(){
         $data['employee'] = $this->table_model->get_all_data();
         $data['category'] = $this->table_model->get_category();
-        $this->form_validation->set_rules('NIK','NIK', 'unique');
-        $this->form_validation->set_rules('user_email', 'Email Address', 'required|trim|valid_email');
-        if ($this->form_validation->run()){
-            
+        $this->form_validation->set_rules('division','Division', 'required');
+        if ($this->form_validation->run() == FALSE ){
+            $this->load->view("admin/admin_table",$data);
+        } else {
             $id = $this->input->post("id",TRUE);
             $new_data   =   array(
-                "NIK"                   => $this->input->post("NIK"),
                 "email"                 =>  $this->input->post("email"),
                 "first_name"            =>  $this->input->post("first_name"),
                 "last_name"             =>  $this->input->post("last_name"),
@@ -30,7 +27,6 @@
                 "join_date"             =>  $this->input->post("join_date"),
                 "employee_category_id" =>  "3"
             );
-            $this->session->set_flashdata('message', "Here");
 
             if ($id == ""){ //id empty,insert
                 $result = $this->db->insert("employee", $new_data);
@@ -41,11 +37,8 @@
                 $result=$this->db->update("employee", $new_data);
                 $this->session->set_flashdata('message', "Update Success");
                 redirect("table");
+
             }
-            $this->session->set_flashdata('message', "Nothing");
-        } else {
-            // $this->session->set_flashdata('message', "View view");
-            $this->load->view("admin/admin_table", $data);
         }
         
     }
