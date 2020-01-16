@@ -1,15 +1,12 @@
 <!DOCTYPE html>  
  <html>  
  <head>  
-     <title>HELO</title>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+     <?php $this->load->view("partials/header.php") ?>
 </head>   
 <body class="bg-gradient-primary"> 
       <div class="container">  
-           <br /><br /><br />  
-           <?php 
+          <br /><br /><br />  
+          <?php 
           if ($this->session->flashdata('message')){
                echo '<div class="alert alert-success py-2">'.$this->session->flashdata("message").'</div>';
           }

@@ -28,14 +28,16 @@
   Feature
 </div>
 
-
-
 <!-- Nav Item - Tables -->
-<li class="nav-item active">
-  <a class="nav-link" href="<?php echo base_url(); ?>table">
-    <i class="fas fa-fw fa-table"></i>
-    <span>Employee</span></a>
-</li>
+<?php if ($this->session->level == '1'){ ?>
+  <li class="nav-item active">
+    <a class="nav-link" href="<?php echo base_url(); ?>table">
+      <i class="fas fa-fw fa-table"></i><span>Employee</span>
+    </a>
+  </li>
+ <?php } ?>
+
+
 
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">

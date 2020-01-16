@@ -29,12 +29,7 @@
 
     function manager(){
         if ($this->session->level == 2 ){
-            echo "<h1>Manager Page</h1>";
-            echo "WElcome " ;
-            echo $this->session->userdata('name');
-            echo "Level is " ;
-            echo $this->session->userdata('level') ;
-            echo '<p align="center"><a href="'.base_url().'private_area/logout">Logout</a><p>';
+            redirect("table");
         }
 
     }
