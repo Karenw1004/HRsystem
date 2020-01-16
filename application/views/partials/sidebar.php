@@ -14,7 +14,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item">
-  <a class="nav-link" href="index.html">
+  <a class="nav-link" href="<?php echo base_url(); ?>private_area">
     <i class="fas fa-fw fa-tachometer-alt"></i>
     <span>Dashboard</span></a>
 </li>
@@ -29,7 +29,7 @@
 </div>
 
 <!-- Nav Item - Tables -->
-<?php if ($this->session->level == '1'){ ?>
+<?php if ($this->session->level == '1' ||  $this->session->level == '2'){ ?>
   <li class="nav-item active">
     <a class="nav-link" href="<?php echo base_url(); ?>table">
       <i class="fas fa-fw fa-table"></i><span>Employee</span>

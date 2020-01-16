@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php $this->load->view("partials/header.php") ?>
-
+  <?php $this->load->view("partials/header.php") ?>
 </head>
 <body id="page-top">
 

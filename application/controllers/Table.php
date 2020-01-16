@@ -3,9 +3,11 @@
  class Table extends CI_Controller {  
     public function __construct() {
         parent::__construct();
-        $this->load->helper('form');
         $this->load->library('form_validation');
         $this->load->model('table_model');
+        if (! ($this->session->level == 1 || $this->session->level == 2 )){
+            redirect("auth");
+        }
     }
     function index(){
         $data['employee'] = $this->table_model->get_all_data();

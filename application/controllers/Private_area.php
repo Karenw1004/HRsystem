@@ -11,13 +11,26 @@
     }
 
     function index() {
-        if ($this->session->level == 1 ){
-            redirect("table");
-        }
+        // if ($this->session->level == 1 ){
+        //     $this->load->view("dashboard");
+        // }
+        $this->load->view("dashboard");
 
     }
        
+    function manager(){
+        if ($this->session->level == 2 ){
+            $this->load->view("dashboard");
+        }
 
+    }
+
+    function staff(){
+        if ($this->session->level == 3 ){
+            $this->load->view("dashboard");
+        }
+
+    }
     function logout(){
         $data = $this->session->all_userdata();
         foreach($data as $row => $row_value){
@@ -27,25 +40,7 @@
         redirect("auth");
     }
 
-    function manager(){
-        if ($this->session->level == 2 ){
-            redirect("table");
-        }
-
-    }
-
-    function staff(){
-        if ($this->session->level == 3 ){
-            echo "<h1>Staff Page</h1>";
-            echo "WElcome " ;
-            echo $this->session->userdata('name');
-        //    echo $this->session->userdata('email');
-            echo "Level is " ;
-            echo $this->session->userdata('level') ;
-            echo '<p align="center"><a href="'.base_url().'private_area/logout">Logout</a><p>';
-        }
-
-    }
+    
  }  
 
 ?>
