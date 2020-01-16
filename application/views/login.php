@@ -42,7 +42,7 @@
                                    <h1 class="h4 text-gray-900 mb-4">Log In</h1>
                               </div>
 
-                              <form class="user" method="POST" action="<?php echo base_url(); ?>login/login_validation">  
+                              <form class="user" method="POST" action="<?php echo base_url(); ?>auth/login_validation">  
 
                                    <div class="form-group">  
                                         <input type="email" name="user_email" value="<?php echo set_value('user_email'); ?>" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." /> 
@@ -63,11 +63,11 @@
                               <hr>
                                    
                               <div class="text-center">
-                                   <a class="small" href="<?php echo base_url(); ?>login/forget_password">Forgot Password?</a>
+                                   <a class="small" href="<?php echo base_url(); ?>auth/forget_password">Forgot Password?</a>
                               </div>
                               
                               <div class="text-center">
-                                   <a class="small" href="<?php echo base_url(); ?>login/register">Create an Account</a>
+                                   <a class="small" href="<?php echo base_url(); ?>auth/register">Create an Account</a>
                               </div>
 
                          </div> 

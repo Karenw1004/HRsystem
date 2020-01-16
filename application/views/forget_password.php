@@ -38,7 +38,7 @@
                               <p class="mb-4">We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!</p>
                          </div>
 
-                         <form class="user" method="POST" action="<?php echo base_url(); ?>login/forget_password">  
+                         <form class="user" method="POST" action="<?php echo base_url(); ?>auth/forget_password">  
                               <div class="form-group">  
                                    <input type="text" name="user_email" value="<?php echo set_value('user_email'); ?>" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." /> 
                                    <span class="text-danger"><?php echo form_error('user_email'); ?></span>  
@@ -52,11 +52,11 @@
                          </form>
                          
                          <div class="text-center">
-                              <a class="small" href="<?php echo base_url(); ?>login/register">Create an Account</a>
+                              <a class="small" href="<?php echo base_url(); ?>auth/register">Create an Account</a>
                          </div>
 
                          <div class="text-center">
-                              <a class="small" href="<?php echo base_url(); ?>login" >Already have an account? Login!</a>
+                              <a class="small" href="<?php echo base_url(); ?>auth" >Already have an account? Login!</a>
                          </div>
 
                          </div> 

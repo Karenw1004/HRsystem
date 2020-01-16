@@ -1,6 +1,6 @@
 <?php  
  defined('BASEPATH') OR exit('No direct script access allowed');  
-  class Login extends CI_Controller {  
+  class Auth extends CI_Controller {  
     
   public function __construct() {
     parent::__construct();
@@ -36,7 +36,7 @@
     else{
       //error message
       $this->session->set_flashdata('error', $result);
-      redirect("login");
+      redirect("auth");
     }
     }
     else
@@ -59,11 +59,11 @@
         $this->send_email($verification_key,"forget");
         $this->session->set_flashdata("message","Please check your email to reset your password!");
 
-        redirect("login/forget_password");
+        redirect("auth/forget_password");
 
       } else{
         $this->session->set_flashdata("error","Email is not registered or is not verified");
-        redirect("login");
+        redirect("auth");
       }
     
     } else {
@@ -87,18 +87,18 @@
       }
       else {
         $this->session->set_flashdata("error", "Wrong verification key");
-        redirect("login");
+        redirect("auth");
       }
     } else {
       $this->session->set_flashdata("error", "Reset Password failed");
-      redirect("login");
+      redirect("auth");
     }
   }
 
   function change_password(){
 
     if (!$this->session->userdata("reset_email")){
-      redirect("login");
+      redirect("auth");
     }
 
     $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[7]|matches[password2]');
@@ -115,7 +115,7 @@
       $this->session->unset_userdata("reset_email");
 
       $this->session->set_flashdata("message","Password has been changed.");
-      redirect("login");
+      redirect("auth");
 
     } else {
       $this->load->view("change_password");

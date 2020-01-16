@@ -4,7 +4,7 @@
     public function __construct() {
         parent::__construct();
         if (!$this->session->userdata('id')){
-            redirect("login");
+            redirect("auth");
         }
         $this->load->model('table_model');
        
@@ -24,7 +24,7 @@
             $this->session->unset_userdata($row);
 
         }
-        redirect("login");
+        redirect("auth");
     }
 
     function manager(){

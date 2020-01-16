@@ -44,7 +44,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                               </div>
 
-                              <form class="user" method="POST" action="<?php echo base_url(); ?>login/register_validation">
+                              <form class="user" method="POST" action="<?php echo base_url(); ?>auth/register_validation">
 
                                    <div class="form-group">  
                                         <input type="text" name="user_name" class="form-control form-control-user" id="exampleFirstName" placeholder="Enter Username" value="<?php echo set_value('user_name'); ?>" />
@@ -70,11 +70,11 @@
                               <hr>
 
                               <div class="text-center">
-                                   <a class="small" href="<?php echo base_url(); ?>login/forget_password">Forgot Password?</a>
+                                   <a class="small" href="<?php echo base_url(); ?>auth/forget_password">Forgot Password?</a>
                               </div>
                               
                               <div class="text-center">
-                                   <a class="small" href="<?php echo base_url(); ?>login" >Already have an account? Login!</a>
+                                   <a class="small" href="<?php echo base_url(); ?>auth" >Already have an account? Login!</a>
                               </div>
 
                               
@@ -91,6 +91,6 @@
           </div>  
      </div>
 
-     <?php $this->load->view("admin/_partials/footer.php") ?>
+     <?php $this->load->view("partials/footer.php") ?>
  </body>  
  </html>  
