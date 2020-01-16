@@ -16,7 +16,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <?php $this->load->view("admin/_partials/sidebar.php") ?>
+    <?php $this->load->view("partials/sidebar.php") ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -24,7 +24,7 @@
       <!-- Main Content -->
       <div id="content">
 
-        <?php $this->load->view("admin/_partials/topbar.php") ?>
+        <?php $this->load->view("partials/topbar.php") ?>
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
@@ -91,8 +91,8 @@
                   <td><?php echo $address?></td>
                   <td><?php echo $photo_path?></td>
                   <td><?php echo $join_date?></td>
-                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>">Update</button>
-                  <button class="hapus_record btn btn-danger " data-toggle="modal" data-target="#ModalDelete" data-id="<?php echo $id?>">Delete</button></td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>"><i class="fas fa-edit"></i>Update</button>
+                  <button class="hapus_record btn btn-danger " data-toggle="modal" data-target="#ModalDelete" data-id="<?php echo $id?>"><i class="fas fa-trash"></i>Delete</button></td>
                 </tr>
 				        <?php endforeach;?>
                 </tbody>
@@ -117,7 +117,7 @@
   </div>                    
  
  
-  <?php $this->load->view("admin/_partials/footer.php") ?>
+  <?php $this->load->view("partials/footer.php") ?>
 
 
    
