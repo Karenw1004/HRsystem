@@ -30,7 +30,7 @@
 
 <!-- Nav Item - Tables -->
 <?php if ($this->session->level == '1' ||  $this->session->level == '2'){ ?>
-  <li class="nav-item active">
+  <li class="nav-item ">
     <a class="nav-link" href="<?php echo base_url(); ?>table">
       <i class="fas fa-fw fa-table"></i><span>Employee</span>
     </a>
@@ -38,22 +38,24 @@
  <?php } ?>
 
 
-
-<!-- Nav Item - Utilities Collapse Menu -->
+<!-- Nav Item - Izin -->
 <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fab fa-wpforms"></i>
-          <span>Forms</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Forms:</h6>
-            <a class="collapse-item" href="utilities-color.html">Izin</a>
-            <a class="collapse-item" href="utilities-border.html">Lembur</a>
-            <a class="collapse-item" href="utilities-animation.html">Cuti</a>
-          </div>
-        </div>
-      </li>
+  <a class="nav-link" href="<?php echo base_url(); ?>form">
+    <i class="fas fa-fw fa-tachometer-alt"></i>
+    <span>Izin</span></a>
+</li>
+<!-- Nav Item - Lembur -->
+<li class="nav-item">
+  <a class="nav-link" href="<?php echo base_url(); ?>form">
+    <i class="fas fa-fw fa-tachometer-alt"></i>
+    <span>Lembur</span></a>
+</li>
+<!-- Nav Item - Cuti -->
+<li class="nav-item">
+  <a class="nav-link" href="<?php echo base_url(); ?>form">
+    <i class="fas fa-fw fa-tachometer-alt"></i>
+    <span>Cuti</span></a>
+</li>
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
