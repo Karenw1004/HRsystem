@@ -93,7 +93,8 @@ $(document).ready(function(){
         }
        
 			//store the value to a field 
-			$("#duration").val(duration); 															 
+      // $("#duration").val(duration); 
+      $("#duration").attr("value",duration); 															 
 		});    
 		
 		//-----------------------------------------------------------------

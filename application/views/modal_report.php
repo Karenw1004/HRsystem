@@ -26,16 +26,16 @@
                         <label class="col-4" for="duration">Duration:</label>
                         <div class="row">
 
-                            <div class="col-md-4 bootstrap-timepicker timepicker">
+                            <div class="col-4 bootstrap-timepicker timepicker">
                                 <input id="timepicker1" name="start-time" type="text" class="form-control input-small form-validator">
                             </div>
 
-                            <div class="col-md-4 bootstrap-timepicker timepicker">
+                            <div class="col-4 bootstrap-timepicker timepicker">
                                 <input id="timepicker2" name="end-time" type="text" class="form-control input-small form-validator">
                             </div>
 
-                            <div class="col-md-4">
-                                <input id="duration" name="duration" type="text" class="form-control input-small form-validator" disabled>
+                            <div class="col-4">
+                                <input id="duration" value="" name="duration" type="text" class="form-control input-small form-validator" disabled>
                             </div>
 
                         </div>
@@ -43,13 +43,13 @@
 
 
                     <div class="form-group">
-                        <label for="descriptioin"> Work Description</label>
-                        <textarea class="form-control form-validator" id="description" rows="3"></textarea>
+                        <label for="description"> Work Description</label>
+                        <textarea class="form-control form-validator" name="description" id="description" rows="3"></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="descriptioin"> Work Result</label>
-                        <textarea class="form-control form-validator" id="result" rows="2"></textarea>
+                        <label for="description"> Work Result</label>
+                        <textarea class="form-control form-validator" name="result" id="result" rows="2"></textarea>
                     </div>
 
                     <div class="form-group">

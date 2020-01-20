@@ -12,24 +12,34 @@
         $data['category'] = $this->db->get("categories")->result_array();
         // $category_id = $this->input->post('id',TRUE);
         $data['manager'] = $this->db->get_where('employee', array('employee_category_id' => "2"))->result_array();
+        $this->form_validation->set_rules('description','Work Description', 'required');
+
         if ($this->form_validation->run() == FALSE ){
             $this->load->view("overtime",$data);
         }
         else{
             $id = $this->input->post("id",TRUE);
             $new_data   =   array(
-                "NIK"                   =>  strtotime( date('Y-m-d H:i:s') ),
-                "email"                 =>  $this->input->post("email"),
-                "first_name"            =>  $this->input->post("first_name"),
-                "last_name"             =>  $this->input->post("last_name"),
-                "division"              =>  $this->input->post("division"),
-                "position"              =>  $this->input->post("position"),
-                "phone_num"             =>  $this->input->post("phone_num"),
-                "address"               =>  $this->input->post("address"),
-                "photo_path"            =>  $this->input->post("photo_path"),
-                "join_date"             =>  $this->input->post("join_date"),
-                "employee_category_id" =>  "3"
+                "name"                =>  "NAME",
+                "date"                =>  $this->input->post("date"),
+                "duration"            =>  $this->input->post("duration"),
+                "description"         =>  $this->input->post("description"),
+                "result"              =>  $this->input->post("result"),
+                "given_by"            =>  $this->input->post("given_by"),
+                "status"              =>  "PENDING"
             );
+
+            if ($id == ""){ //id empty,insert
+                $result = $this->db->insert("overtime", $new_data);
+                $this->session->set_flashdata('message', "Insert Success");
+                // redirect("form");
+            } else { //update
+                $this->db->where("id",$id);
+                $result=$this->db->update("overtime", $new_data);
+                $this->session->set_flashdata('message', "Update Success");
+                // redirect("form");
+
+            }
         }
     }
 }

@@ -28,7 +28,7 @@
                 "address"               =>  $this->input->post("address"),
                 "photo_path"            =>  $this->input->post("photo_path"),
                 "join_date"             =>  $this->input->post("join_date"),
-                "employee_category_id" =>  "3"
+                "employee_category_id"  =>  "3"
             );
 
             if ($id == ""){ //id empty,insert
