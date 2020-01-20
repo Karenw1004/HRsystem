@@ -38,23 +38,17 @@
  <?php } ?>
 
 
-<!-- Nav Item - Izin -->
+<!-- Nav Item - Overtime -->
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url(); ?>form">
     <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Izin</span></a>
+    <span>Overtime</span></a>
 </li>
-<!-- Nav Item - Lembur -->
+<!-- Nav Item - Approval -->
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url(); ?>form">
     <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Lembur</span></a>
-</li>
-<!-- Nav Item - Cuti -->
-<li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url(); ?>form">
-    <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Cuti</span></a>
+    <span>Approval</span></a>
 </li>
 
 <!-- Divider -->

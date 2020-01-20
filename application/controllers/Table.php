@@ -4,14 +4,14 @@
     public function __construct() {
         parent::__construct();
         $this->load->library('form_validation');
-        $this->load->model('table_model');
         if (! ($this->session->level == 1 || $this->session->level == 2 )){
             redirect("auth");
         }
     }
     function index(){
-        $data['employee'] = $this->table_model->get_all_data();
-        $data['category'] = $this->table_model->get_category();
+        $query = $this->db->get('employee');
+        $data['employee'] = $query->result_array();;
+        $data['category'] = $this->db->get("categories");
         $this->form_validation->set_rules('division','Division', 'required');
         if ($this->form_validation->run() == FALSE ){
             $this->load->view("admin/admin_table",$data);
@@ -47,7 +47,10 @@
     }
    
     function delete(){
-        $this->table_model->delete_product();
+        $id = $this->input->post("id");
+        $this->db->where("id",$id);
+        $this->db->delete("employee");
+        $this->session->set_flashdata('message', "Delete Success");
         redirect('table');
     }
        

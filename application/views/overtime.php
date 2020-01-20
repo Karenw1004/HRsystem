@@ -22,15 +22,16 @@
         <div class="container-fluid">
 
           <h1 class="h3 mb-2 text-gray-800 py-2">Overtime </h1>
-          <button class="btn btn-success float-right " data-toggle="modal" data-target="#myModalAdd"><i class="fas fa-user-plus"></i>  Report</button>
-          
+          <button class="btn btn-success pull-right " data-toggle="modal" data-target="#myModalReport"><i class="fas fa-user-plus"></i>  Report</button>
+          <?php $this->load->view("modal_report.php") ?>
+
           <?php 
           if ($this->session->flashdata('message')){
                echo '<div class="alert alert-success">'.$this->session->flashdata("message").'</div>';
           }
           ?>
 
-          <?php 
+          <?php
           if ($this->session->flashdata('error')){
                echo '<div class="alert alert-danger">'.$this->session->flashdata("error").'</div>';
           }
@@ -54,7 +55,7 @@
               </thead>
               <tbody>
           			
-                </tbody>
+              </tbody>
             </table>
            
             </div>
