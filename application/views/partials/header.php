@@ -7,4 +7,7 @@
 <link href="<?= base_url("assets/"); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="<?php echo base_url().'assets/vendor/datatables/dataTables.bootstrap4.min.css'?>">
+<link href="<?php echo base_url().'assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'?>" rel='stylesheet' type='text/css'>
+<link href="<?php echo base_url().'assets/vendor/timepicker/bootstrap-timepicker.min.css'?>" rel='stylesheet' type='text/css'>
+
 

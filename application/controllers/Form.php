@@ -8,8 +8,12 @@
     }
 
     function index(){
+        $data['employee'] = $this->db->get('employee')->result_array();
+        $data['category'] = $this->db->get("categories")->result_array();
+        // $category_id = $this->input->post('id',TRUE);
+        $data['manager'] = $this->db->get_where('employee', array('employee_category_id' => "2"))->result_array();
         if ($this->form_validation->run() == FALSE ){
-            $this->load->view("overtime");
+            $this->load->view("overtime",$data);
         }
         else{
             $id = $this->input->post("id",TRUE);
