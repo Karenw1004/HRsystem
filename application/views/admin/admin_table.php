@@ -37,7 +37,7 @@
                echo '<div class="alert alert-danger">'.$this->session->flashdata("error").'</div>';
           }
           ?>
-          <div class="container py-3">
+          <div class="container my-3">
             
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

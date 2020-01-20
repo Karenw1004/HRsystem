@@ -6,7 +6,6 @@
         if (!$this->session->userdata('id')){
             redirect("auth");
         }
-        $this->load->model('table_model');
        
     }
 

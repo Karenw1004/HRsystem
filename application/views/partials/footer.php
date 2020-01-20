@@ -7,7 +7,9 @@
 
 <script src="<?php echo base_url().'assets/vendor/datatables/jquery.dataTables.min.js'?>"></script>
 <script src="<?php echo base_url().'assets/vendor/datatables/dataTables.bootstrap4.min.js'?>"></script>
+<!-- Script for DataTable -->
 <script>
+
   $(function () {
 
     $('#dataTable').DataTable({
@@ -32,4 +34,19 @@
   });
 
   });
+</script>
+
+<!-- Datepicker -->
+<link href="<?php echo base_url().'assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'?>" rel='stylesheet' type='text/css'>
+<script src="<?php echo base_url(). 'assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'?>" type='text/javascript'></script>
+
+<!-- Script for Datepicker-->
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#datepicker').datepicker({
+    format: 'mm-dd-yyyy',
+    endDate: '+0d',
+    autoclose: true
+  });
+});
 </script>
