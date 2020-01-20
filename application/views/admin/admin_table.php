@@ -83,8 +83,8 @@
                   <td><?php echo $address?></td>
                   <td><?php echo $photo_path?></td>
                   <td><?php echo $join_date?></td>
-                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalUpdate<?php echo $id?>"><i class="fas fa-edit"></i>Update</button>
-                  <button class="hapus_record btn btn-danger " data-toggle="modal" data-target="#ModalDelete" data-id="<?php echo $id?>"><i class="fas fa-trash"></i>Delete</button></td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#myModalUpdate<?php echo $id?>"><i class="fas fa-edit"></i>Update</button>
+                  <button class="hapus_record btn btn-danger " data-toggle="modal" data-target="#myModalDelete" data-id="<?php echo $id?>"><i class="fas fa-trash"></i>Delete</button></td>
                 </tr>
 				        <?php endforeach;?>
                 </tbody>

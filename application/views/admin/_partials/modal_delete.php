@@ -1,6 +1,6 @@
 <!-- Modal delete Product-->
 <form id="delete-row-form" action="<?php echo base_url('table/delete')?>" method="post">
-    <div class="modal fade" id="ModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         

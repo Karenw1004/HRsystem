@@ -15,7 +15,7 @@
 ?>
 <!-- Modal Update Product-->
 <form class="update-row-form" action="<?php echo base_url('table');?>" method="post">
-    <div class="modal fade" id="ModalUpdate<?php echo $id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModalUpdate<?php echo $id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
 
