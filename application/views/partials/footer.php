@@ -119,14 +119,16 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
   $(".accept, .decline").click(function () {
-    var overtime_id = $(this).attr('data-id');
+    let overtime_id = $(this).attr('data-id');
+    let status = $(this).val();
     let BASE_URL = $("#report-row-form").attr("action");
     $.ajax({
       url:  BASE_URL + "/approval",
       type: "POST",
       data: { 
         id: overtime_id ,
-        status: "ACCEPT"},
+        status: status
+        },
       success: function( response ) {
         window.location = BASE_URL;
       },

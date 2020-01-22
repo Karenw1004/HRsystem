@@ -45,7 +45,7 @@
     <i class="fas fa-fw fa-tachometer-alt"></i>
     <span>
     <?php if ($this->session->level == "3" ) {echo "Overtime" ;} 
-      else {echo "Aprroval";}
+      else {echo "Approval";}
     ?>
     </span>
   </a>

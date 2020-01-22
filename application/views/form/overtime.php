@@ -79,8 +79,8 @@
                   <td>
                     <?php if($this->session->level == "3") { echo $status ;} 
                       else { 
-                        echo "<button  type='submit' class='btn btn-primary accept' data-id=' " .$id. "'><i class='fas fa-check'></i></button> "; 
-                        echo "<button  type='submit' class='btn btn-danger decline'><i class='fas fa-times'></i></button> ";
+                        echo "<button  type='submit' class='btn btn-primary accept' data-id=' " .$id. "' value='ACCEPT'><i class='fas fa-check'></i></button> "; 
+                        echo "<button  type='submit' class='btn btn-danger decline' data-id=' " .$id. "' value='DECLINE'><i class='fas fa-times'></i></button> ";
                       }
                   ?></td>
                 </tr>
