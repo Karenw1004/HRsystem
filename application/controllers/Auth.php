@@ -188,7 +188,7 @@
           $subject = "Please verify email for login";
           $message = "
           <p>Hi ".$this->input->post('user_name')."</p>
-          <p>This is email verification mail from XXXXXXXXXXXXXXX. For complete registration process and login into system. First you want to verify you email by click this <a href='".base_url()."register/verify_email/".$key."'>link</a>.</p>
+          <p>This is email verification mail from XXXXXXXXXXXXXXX. For complete registration process and login into system. First you want to verify you email by click this <a href='".base_url()."auth/verify_email/".$key."'>link</a>.</p>
           <p>Once you click this link your email will be verified and you can login into system.</p>
           <p>Thanks,</p>
           ";
@@ -197,7 +197,7 @@
           $message = "
           <p>Hi ".$this->input->post('user_name')."</p>
           <p>This is forget password mail from XXXXXXXXXXXXXXX. 
-          To reset your password click this <a href='".base_url()."login/reset_password?email=" .$this->input->post("user_email").
+          To reset your password click this <a href='".base_url()."auth/reset_password?email=" .$this->input->post("user_email").
           "&verification_key=" .$key."'>link</a>.</p>
           <p>Once you click this link your email will be verified and you can login into system.</p>
           <p>Thanks,</p>

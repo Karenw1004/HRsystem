@@ -38,18 +38,19 @@
  <?php } ?>
 
 
-<!-- Nav Item - Overtime -->
+
+<!-- Nav Item - Approval/ Overtime -->
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url(); ?>form">
     <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Overtime</span></a>
+    <span>
+    <?php if ($this->session->level == "3" ) {echo "Overtime" ;} 
+      else {echo "Aprroval";}
+    ?>
+    </span>
+  </a>
 </li>
-<!-- Nav Item - Approval -->
-<li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url(); ?>form">
-    <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Approval</span></a>
-</li>
+
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">

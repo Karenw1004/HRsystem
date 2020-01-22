@@ -52,8 +52,7 @@
         $this->db->delete("employee");
         $this->session->set_flashdata('message', "Delete Success");
         redirect('table');
-    }
-       
+    }     
  }  
 
 ?>

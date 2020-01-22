@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="col-4">
-                                <input id="duration" value="" name="duration" type="text" class="form-control input-small form-validator" disabled>
+                                <input id="duration" name="duration" type="text" readonly="readonly" class="form-control input-small form-validator" >
                             </div>
 
                         </div>

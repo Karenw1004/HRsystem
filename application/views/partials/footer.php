@@ -43,7 +43,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
  $('#datepicker').datepicker({
-    format: 'mm-dd-yyyy',
+    format: 'yyyy-mm-dd',
     endDate: '+0d',
     autoclose: true
   });
@@ -82,15 +82,12 @@ $(document).ready(function(){
 
 
       diff = duration_total; // ms per day
-        var hours = Math.floor(diff / 60);
-        var minutes = diff % 60;
-        var hour = (hours > 1) ? hours + " hrs " : hours + " hr ";
-        var min = (minutes > 0) ? minutes + " mins" : "";
-        var duration= hour + min;
-			  if (diff == null) { return ""; }
-        if (diff <= 0) { 
-          duration = "";
-        }
+      var hours = Math.floor(diff / 60);
+      var minutes = diff % 60;
+      var hour = (hours > 1) ? hours + " hrs " : hours + " hr ";
+      var min = (minutes > 0) ? minutes + " mins" : "";
+      var duration = hour + min;
+      if (diff == null || diff <= 0 ) { duration = "";}
        
 			//store the value to a field 
       // $("#duration").val(duration); 
@@ -117,8 +114,30 @@ $(document).ready(function(){
       
   });
   
-  
+</script>
+
+<script>
+$(document).ready(function(){
+  $(".accept, .decline").click(function () {
+    var overtime_id = $(this).attr('data-id');
+    let BASE_URL = $("#report-row-form").attr("action");
+    $.ajax({
+      url:  BASE_URL + "/approval",
+      type: "POST",
+      data: { 
+        id: overtime_id ,
+        status: "ACCEPT"},
+      success: function( response ) {
+        window.location = BASE_URL;
+      },
+      error: function(xhr, status, error) {
+      console.log(error);
+   },
+    });
+
+  });
 
 
 
+});
 </script>

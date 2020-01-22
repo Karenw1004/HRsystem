@@ -4,7 +4,7 @@
      <?php $this->load->view("partials/header.php") ?>
 </head>   
 <body class="bg-gradient-primary"> 
-      <div class="container">  
+     <div class="container">  
           <br /><br /><br />  
           <?php 
           if ($this->session->flashdata('message')){
