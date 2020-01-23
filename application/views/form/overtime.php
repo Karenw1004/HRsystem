@@ -40,7 +40,23 @@
           ?>
           <div class="container py-2">
             <?php if ($this->session->level == "3" ) { echo "<h3>" .$this->session->name. "</h3>"; } ?>
-            <div class="table-responsive">
+
+            <div class="row">
+              <!-- <div class="input-daterange"> -->
+                <div class="col-md-4">
+                  <input type="text" name="start_date" id="start_date" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="end_date" id="end_date" class="form-control" />
+                </div>      
+              <!-- </div> -->
+              <div class="col-md-4">
+                <input type="button" name="search" id="apply" value="Apply" class="btn btn-info" />
+              </div>
+            </div>
+
+            
+            <div class="table-responsive ">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>

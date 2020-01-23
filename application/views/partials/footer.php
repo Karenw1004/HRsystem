@@ -128,7 +128,7 @@ $(document).ready(function(){
       data: { 
         id: overtime_id ,
         status: status
-        },
+      },
       success: function( response ) {
         window.location = BASE_URL;
       },
@@ -139,7 +139,61 @@ $(document).ready(function(){
 
   });
 
+});
+</script>
+
+<script type="text/javascript" language="javascript" >
+$(document).ready(function(){
+ 
+  $('#start_date,#end_date').datepicker({
+    todayBtn:'linked',
+    format: "yyyy-mm-dd",
+    autoclose: true
+  });
+
+  fetch_data('no');
+
+  function fetch_data(is_date_search, start_date='', end_date='')
+  {
+    let BASE_URL = $("#report-row-form").attr("action");
+    if (is_date_search == "yes"){
+      $.ajax({
+      url:  BASE_URL + "/date",
+      type: "POST",
+      data:{
+        is_date_search:is_date_search, start_date:start_date, end_date:end_date
+      },
+      success: function( response ) {
+        console.log(is_date_search);
+        console.log(start_date);
+        console.log(end_date);
 
 
+        console.log("success") ;
+        window.location = BASE_URL;
+      },
+      error: function(xhr, status, error) {
+        console.log(error);
+      },
+    });
+    }
+    
+  
+ }
+
+    $('#apply').click(function(){
+      var start_date = $('#start_date').val();
+      var end_date = $('#end_date').val();
+      if(start_date != '' && end_date !='')
+      {
+        $('#datatable').DataTable().destroy();
+        fetch_data('yes', start_date, end_date);
+      }
+      else
+      {
+        alert("Both Date is Required");
+      }
+  }); 
+ 
 });
 </script>

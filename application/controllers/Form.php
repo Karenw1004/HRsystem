@@ -17,7 +17,7 @@
         }
         $data['employee'] = $this->db->get('employee')->result_array();
         $data['category'] = $this->db->get("categories")->result_array();
-        // $category_id = $this->input->post('id',TRUE);
+        $category_id = $this->input->post('id',TRUE);
         $data['manager'] = $this->db->get_where('employee', array('employee_category_id' => "2"))->result_array();
         
 
@@ -66,6 +66,25 @@
         $this->db->where("id",$id);
         $result=$this->db->update("overtime", $update_data);
         // redirect is at the footer ajax script
+    }
+
+    function date(){
+        $is_date_search = $this->input->post("is_date_search");
+        $start_date = $this->input->post("start_date");
+        $end_date = $this->input->post("end_date");
+        
+        if ($is_date_search == "yes"){
+
+            $query = "SELECT * FROM overtime WHERE date BETWEEN $start_date AND $end_date";
+            $data['overtime'] = $this->db->query($query)->result_array();
+            $this->session->set_flashdata('message', $data['overtime']['name']);
+
+
+        
+        }
+                
+
+    
     }
 
 }
